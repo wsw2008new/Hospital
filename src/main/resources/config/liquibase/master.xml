@@ -5,6 +5,14 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160531215948_added_entity_Department.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160601055705_added_entity_Doctor.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160601060211_added_entity_Patient.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160601060540_added_entity_OtherEmployees.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160601061936_added_entity_Examinations.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20160601055705_added_entity_constraints_Doctor.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160601060211_added_entity_constraints_Patient.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160601061936_added_entity_constraints_Examinations.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

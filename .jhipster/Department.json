@@ -1,0 +1,22 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "department"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20160531215948",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "department",
+    "pagination": "pager"
+}

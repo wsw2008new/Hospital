@@ -1,0 +1,63 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "department",
+            "otherEntityName": "department",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipName": "examinations",
+            "otherEntityName": "examinations",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "doctor"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "fname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "lname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "degree",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "position",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20160601055705",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "doctor",
+    "pagination": "pager"
+}

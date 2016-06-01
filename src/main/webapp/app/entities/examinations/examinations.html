@@ -1,0 +1,70 @@
+<div>
+    <h2>Examinations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="examinations.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span >
+                        Create new Examinations
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="date"><span>Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="conclusion"><span>Conclusion</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorId"><span>Doctor</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="patientId"><span>Patient</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="examinations in vm.examinations track by examinations.id">
+                    <td><a ui-sref="examinations-detail({id:examinations.id})">{{examinations.id}}</a></td>
+                        <td>{{examinations.date | date:'mediumDate'}}</td>
+                    <td>{{examinations.conclusion}}</td>
+                    <td>
+                        <a ui-sref="doctor-detail({id:examinations.doctorId})">{{examinations.doctorId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="patient-detail({id:examinations.patientId})">{{examinations.patientId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="examinations-detail({id:examinations.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="examinations.edit({id:examinations.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="examinations.delete({id:examinations.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

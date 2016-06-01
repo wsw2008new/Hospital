@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span>Other Employees</span> {{vm.otherEmployees.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Fname</span></dt>
+        <dd>
+            <span>{{vm.otherEmployees.fname}}</span>
+        </dd>
+        <dt><span>Lname</span></dt>
+        <dd>
+            <span>{{vm.otherEmployees.lname}}</span>
+        </dd>
+        <dt><span>Date Of Birth</span></dt>
+        <dd>
+            <span>{{vm.otherEmployees.dateOfBirth | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Email</span></dt>
+        <dd>
+            <span>{{vm.otherEmployees.email}}</span>
+        </dd>
+        <dt><span>Phone Number</span></dt>
+        <dd>
+            <span>{{vm.otherEmployees.phoneNumber}}</span>
+        </dd>
+        <dt><span>Position</span></dt>
+        <dd>
+            <span translate="{{'hospitalApp.EmployeePositions.' + vm.otherEmployees.position}}">{{vm.otherEmployees.position}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

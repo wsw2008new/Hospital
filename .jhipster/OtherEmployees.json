@@ -1,0 +1,40 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "fname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "lname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "position",
+            "fieldType": "EmployeePositions",
+            "fieldValues": "nurse, janitor, cleaner, hr, law, other",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20160601060540",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "other_employees",
+    "pagination": "pager"
+}

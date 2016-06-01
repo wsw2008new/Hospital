@@ -1,0 +1,71 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOtherEmployeesLabel">Create or edit a Other Employees</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.otherEmployees.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.otherEmployees.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_fname">Fname</label>
+            <input type="text" class="form-control" name="fname" id="field_fname"
+                    ng-model="vm.otherEmployees.fname"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_lname">Lname</label>
+            <input type="text" class="form-control" name="lname" id="field_lname"
+                    ng-model="vm.otherEmployees.lname"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dateOfBirth">Date Of Birth</label>
+                <div class="input-group">
+                    <input id="field_dateOfBirth" type="text" class="form-control" name="dateOfBirth" uib-datepicker-popup="{{dateformat}}" ng-model="vm.otherEmployees.dateOfBirth" is-open="vm.datePickerOpenStatus.dateOfBirth"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateOfBirth')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.otherEmployees.email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                    ng-model="vm.otherEmployees.phoneNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_position">Position</label>
+            <select class="form-control" name="position" ng-model="vm.otherEmployees.position" id="field_position">
+                <option value="nurse">nurse</option>
+                <option value="janitor">janitor</option>
+                <option value="cleaner">cleaner</option>
+                <option value="hr">hr</option>
+                <option value="law">law</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

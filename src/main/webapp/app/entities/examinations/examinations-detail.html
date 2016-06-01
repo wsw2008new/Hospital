@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span>Examinations</span> {{vm.examinations.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Date</span></dt>
+        <dd>
+            <span>{{vm.examinations.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span>Conclusion</span></dt>
+        <dd>
+            <span>{{vm.examinations.conclusion}}</span>
+        </dd>
+        <dt><span>Doctor</span></dt>
+        <dd>
+            <a ui-sref="doctor-detail({id:vm.examinations.doctorId})">{{vm.examinations.doctorId}}</a>
+        </dd>
+        <dt><span>Patient</span></dt>
+        <dd>
+            <a ui-sref="patient-detail({id:vm.examinations.patientId})">{{vm.examinations.patientId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

@@ -1,0 +1,58 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "examinations",
+            "otherEntityName": "examinations",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "patient"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "fname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "lname",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "bloodType",
+            "fieldType": "BloodTypes",
+            "fieldValues": "oplus, ominus, aplus, aminus, bplus, bminus, abplus, abminus",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "otherInfo",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160601060211",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "patient",
+    "pagination": "pager"
+}
